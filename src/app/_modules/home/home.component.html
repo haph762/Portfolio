@@ -1,0 +1,20 @@
+<div class="title-backgroud">
+  <h1 #title class="title text-info">|</h1>
+</div>
+<div style="background-color: green;">
+  <p>normal</p>
+  <p [hidden]="true" class="home1">
+    using hidden
+  </p>
+</div>
+@if(false){
+<p class="home2">using ngIf</p>
+}
+
+<hr>
+<div>Ngay trang home này có sử dụng DI cho service injection1
+  <br>
+  let t = this.injector.get(Injection1Service);
+  <br>
+  nên bạn mở log sẽ thấy các dịch vụ của Injection1 import vào
+</div>

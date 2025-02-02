@@ -1,0 +1,75 @@
+<div class="container">
+  <form [formGroup]="loginF" (submit)="submit()">
+    <div class="mb-3 row">
+      <label for="inputEmail" class="col-4 col-form-label">Email</label>
+      <div class="col-8">
+        <input type="text" class="form-control" formControlName="email" name="inputEmail" id="inputEmail"
+          placeholder="Email" />
+      </div>
+    </div>
+    <fieldset class="mb-3 row">
+      <legend class="col-form-legend col-4">
+      </legend>
+      <div class="col-8" *ngIf="loginF['controls']['email'].dirty && loginF['controls']['email'].errors">
+        <small class="text-danger" *ngIf="loginF['controls']['email'].errors['required']">
+          Email is required
+        </small>
+        <small class="col-8 text-danger" *ngIf="loginF['controls']['email'].errors['email']">
+          Not email
+        </small>
+      </div>
+    </fieldset>
+    <div class="mb-3 row">
+      <label for="inputName" class="col-4 col-form-label">User name</label>
+      <div class="col-8">
+        <input type="text" class="form-control" formControlName="userName" name="inputName" id="inputName"
+          placeholder="User name" />
+      </div>
+    </div>
+    <fieldset class="mb-3 row">
+      <legend class="col-form-legend col-4">
+      </legend>
+      <div class="col-8" *ngIf="loginF['controls']['userName'].dirty && loginF['controls']['userName'].errors">
+        <small class="text-danger" *ngIf="loginF['controls']['userName'].errors['required']">
+          User name is required
+        </small>
+        <small class="col-8 text-danger" *ngIf="loginF['controls']['userName'].errors['minlength']">
+          User name too short
+        </small>
+        <small class="col-8 text-danger" *ngIf="loginF['controls']['userName'].errors['maxlength']">
+          User name too long
+        </small>
+      </div>
+    </fieldset>
+    <div class="mb-3 row">
+      <label for="inputPassword" class="col-4 col-form-label">Password</label>
+      <div class="col-8">
+        <input type="password" class="form-control" formControlName="password" name="inputPassword" id="inputPassword"
+          placeholder="Password" />
+      </div>
+    </div>
+    <fieldset class="mb-3 row">
+      <legend class="col-form-legend col-4">
+      </legend>
+      <fieldset class="mb-3 row">
+        <legend class="col-form-legend col-4">
+        </legend>
+        <div class="col-8" *ngIf="loginF['controls']['password'].dirty && loginF['controls']['password'].errors">
+          <small class="text-danger" *ngIf="loginF['controls']['password'].errors['required']">
+            Password is required
+          </small>
+        </div>
+      </fieldset>
+    </fieldset>
+    <div class="mb-3 row">
+      <div class="offset-sm-4 col-sm-8">
+        <button type="submit" class="btn btn-success" [disabled]="loginF.invalid">
+          Register
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--  -->
+<app-result-form [resultForm]="resultForm"></app-result-form>

@@ -1,0 +1,9 @@
+<div>
+  Trong phần ts ta thấy. khi chỉ chay 1 hàm runOutZone() thì file html này ko render lại và timeNext đứng im !!!
+  <br/>
+  Nhưng khi run hàm runZone() thì ta thấy html có load lại và hiện thị timeNext chính xác, theo hàm interval
+  (Do mở cả hàm runZone() nên html render lại, nên ta thấy timeNextOutZone cũng load lại nhờ html đã render )
+</div>
+<hr>
+<p> the time is on zone angular: {{timeNext}}</p>
+<p> the time is on out zone angular: {{timeNextOutZone}}</p>

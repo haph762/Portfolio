@@ -1,0 +1,11 @@
+<div>
+  Với cách thông thường chúng ta tạo Pipe và export thông qua Module
+  <br>
+  {{today | dateCustomize}}
+  {{today | dateCustomize: 'YYYY-MM-DD'}}
+  <hr>
+  Dùng standalone: true ngay trong Decorator để cho ứng dụng biết là DateCustomize2Pipe là 1 lớp độc lập (không cần
+  import, export trong module và nhúng vào component)
+  <br>
+  {{today | dateCustomize2}}
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="d-flex flex-column align-content-around flex-wrap">
+    <p>acc: admin&#64;gmail.com</p>
+    <p>pw: 1</p>
+  </div>
+  <div class="wrapper d-flex align-items-center justify-content-center h-100">
+    <div class="card login-form">
+      <div class="card-body">
+        <h5 class="card-title text-center">Login Form</h5>
+        <form [formGroup]="formL" (submit)="login()">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp">
+            <div
+              *ngIf="(formL['controls']['email'].dirty || formL['controls']['email'].touched) && formL['controls']['email'].errors">
+              <small class="text-danger" *ngIf="formL['controls']['email'].errors['required']">
+                Email is required
+              </small>
+              <small class="col-8 text-danger" *ngIf="formL['controls']['email'].errors['email']">
+                Not email
+              </small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+            <div
+              *ngIf="(formL['controls']['password'].dirty || formL['controls']['password'].touched) && formL['controls']['password'].errors">
+              <small class="text-danger" *ngIf="formL['controls']['password'].errors['required']">
+                Password is required
+              </small>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Submit</button>
+          <div class="sign-up mt-4">
+            Don't have an account? <a href="#">Create One</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

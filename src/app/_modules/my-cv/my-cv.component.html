@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Phan Hà</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Kinh nghiệm</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Dự án</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
+        <li class="nav-item"><a class="nav-link" [routerLink]="['/demo-angular']"
+            routerLinkActive="router-link-active">Demo
+            Angular</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section id="about" class="section text-center bg-light animate__animated animate__fadeIn">
+  <div class="container">
+    <img
+      src="https://scontent.fsgn2-11.fna.fbcdn.net/v/t39.30808-6/433248944_1124424852079245_1920359430857036367_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGw7-4IZeeh_mNsC-7jhfsjxNdM50wxDd3E10znTDEN3fYeM7Hzwx9TVmQrHOHP_7viYRRMcnc1jVkpWJjk7HLU&_nc_ohc=wRbS5j5Qb1gQ7kNvgFyMvWT&_nc_oc=AdgizC3SfKnONLZZYAWijAxkfht5pnZ_ajcNh4Vy_lGnMLy8aquLmgmXRQboFnjAzOW1Wj5UK2hgPOi8_X1NtQVO&_nc_zt=23&_nc_ht=scontent.fsgn2-11.fna&_nc_gid=AK-WyYybJfP1rU0CNXIgiOQ&oh=00_AYAjMyOhh8vrGgSm3_vozfoyswSaMnARTj00wYmtFt4sXg&oe=67A2AA97"
+      alt="Phan Hồng Hà" class="profile-img mb-3">
+    <h2>Phan Hà</h2>
+    <p>Fullstack Developer với hơn 4 năm kinh nghiệm về thiết kế giao diện người dùng, backend và database.</p>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInUp">Kinh nghiệm làm việc</h2>
+    <ul>
+      <li><strong>Tekmedi</strong> - Backend Developer (xx - xx)</li>
+      <li><strong>LHD</strong> - Web Developer (xx - xx)</li>
+      <li><strong>Shyang Hung Cheng</strong> - Web Developer (xx - xx)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects" class="section bg-light">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInLeft">Các dự án tiêu biểu</h2>
+    <ul>
+      <li>Hệ thống API cho Viện Pasteur</li>
+      <li>Trang thương mại điện tử (Quan Quen, VSirius)</li>
+      <li>Ứng dụng quản lý kho, nhân viên, ERP...</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="section text-center">
+  <div class="container">
+    <h2 class="animate__animated animate__fadeInRight">Liên hệ</h2>
+    <p>Email: <a href="mailto:phanha762@gmail.com">phanha762&#64;gmail.com</a></p>
+    <p>Github: <a href="https://github.com/haph762">github.com/haph762</a></p>
+  </div>
+</section>
+
+
+<app-scrolling-goto-top></app-scrolling-goto-top>

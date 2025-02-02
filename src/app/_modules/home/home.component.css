@@ -1,0 +1,12 @@
+.title-backgroud {
+    background-image: url('https://luhanhtour.com/wp-content/uploads/2020/09/B%C3%ACnh-minh-%C4%91%C3%A8o-Klong-Lanh.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: auto;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

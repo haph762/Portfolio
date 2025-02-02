@@ -1,0 +1,20 @@
+<p>
+  lifecycle-event works!
+</p>
+<hr />
+<p>content {{timeNext}}</p>
+<!-- <ng-container *ngIf="timeNext == 5">
+  <p>ng-container</p>
+</ng-container> -->
+
+
+<hr />
+<p>lifecycle-event-child</p>
+<!-- <app-lifecycle-event-child [timeNext]="timeNext"></app-lifecycle-event-child> -->
+<div class="mb-3">
+  <label for="" class="form-label">Name</label>
+  <input type="text" class="form-control" [(ngModel)]="name" aria-describedby="helpId" placeholder="" />
+  <small id="helpId" class="form-text text-muted">Help text</small>
+</div>
+
+<button class="btn btn-info" (click)="changeTimeNext()">Click Button</button>
